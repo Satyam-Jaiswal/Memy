@@ -1,15 +1,24 @@
 import 'package:Memy/Widget/bottonBar.dart';
 import 'package:flutter/material.dart';
 
-// import 'Profile.dart';
-
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  Widget get middleSection => Container();
+
+
+  Widget get middleSection => Expanded(
+    child: MemeViewer(),      
+      );
+
+   Widget MemeViewer(){
+     return Container(
+       child: Center(child: CircularProgressIndicator()),
+     );
+   }   
+
 
   Widget get topSection => Container(
         height: 100.0,
@@ -50,7 +59,6 @@ class _HomeState extends State<Home> {
             ],
           ),
           screenUI(),
-         
         ],
       ),
     );
