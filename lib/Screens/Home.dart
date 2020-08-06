@@ -1,6 +1,7 @@
+import 'package:Memy/Widget/bottonBar.dart';
 import 'package:flutter/material.dart';
 
-import 'Profile.dart';
+// import 'Profile.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -32,6 +33,7 @@ class _HomeState extends State<Home> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         topSection,
+        BottomBar(),
       ],
     );
   }
@@ -48,18 +50,7 @@ class _HomeState extends State<Home> {
             ],
           ),
           screenUI(),
-          Container(
-            child: Center(
-              child: FloatingActionButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Profile()),
-                  );
-                },
-              ),
-            ),
-          )
+         
         ],
       ),
     );
