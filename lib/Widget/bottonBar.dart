@@ -1,4 +1,3 @@
-// import 'dart:js';
 
 import 'package:Memy/Screens/Home.dart';
 import 'package:Memy/Screens/Profile.dart';
@@ -15,12 +14,6 @@ class BottomBar extends StatelessWidget {
 
   Widget get customCreateIcon => Container(
         child: FloatingActionButton(
-          // onPressed: () {
-          //   Navigator.push(
-          //         context,
-          //         MaterialPageRoute(builder: (context) => Profile()),
-          //       );
-          // },
           child: Icon(
             Icons.add,
             color: Colors.black,
@@ -72,12 +65,11 @@ class BottomBar extends StatelessWidget {
                 },
                 child: customCreateIcon),
             GestureDetector(
-               onTap: () {
+              onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Inbox()),
                 );
-                
               },
               child: MenuButton(
                   'Messages',
@@ -121,15 +113,4 @@ class BottomBar extends StatelessWidget {
       ],
     ));
   }
-}
-
-class Memy {
-  static const IconData chat_bubble = const IconData(0xe808);
-  static const IconData create = const IconData(0xe809);
-  static const IconData heart = const IconData(0xe80a);
-  static const IconData home = const IconData(0xe80b);
-  static const IconData messages = const IconData(0xe80c);
-  static const IconData profile = const IconData(0xe80d);
-  static const IconData reply = const IconData(0xe80e);
-  static const IconData search = const IconData(0xe80f);
 }

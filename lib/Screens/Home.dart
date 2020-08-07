@@ -1,4 +1,5 @@
 import 'package:Memy/Widget/bottonBar.dart';
+import 'package:Memy/models/meme.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -9,13 +10,29 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
 
+  Stream<List<Meme>> listmemes;
+
+
   Widget get middleSection => Expanded(
     child: MemeViewer(),      
       );
 
    Widget MemeViewer(){
      return Container(
-       child: Center(child: CircularProgressIndicator()),
+       child: Center(
+        child: StreamBuilder(
+          initialData: List<Meme>(),
+          stream: listmemes,
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (!snapshot.hasData) return CircularProgressIndicator();  
+            // List<Meme> meme = snapshot.data;
+           
+            return CircularProgressIndicator();
+          
+        }
+      )
+    ) ,
+      //  child: Center(child: CircularProgressIndicator()),
      );
    }   
 
