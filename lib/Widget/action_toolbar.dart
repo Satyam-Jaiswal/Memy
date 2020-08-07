@@ -88,13 +88,8 @@ class ActionsToolbar extends StatelessWidget {
           borderRadius: BorderRadius.circular(ProfileImageSize / 2)
         ),
         // import 'package:cached_network_image/cached_network_image.dart'; at the top to use CachedNetworkImage
-        child:
-        ClipRRect(borderRadius: BorderRadius.circular(10000.0),
-          child:  CachedNetworkImage(
-              imageUrl: userPic,
-              placeholder: (context, url) => new CircularProgressIndicator(),
-              errorWidget: (context, url, error) => new Icon(Icons.error),
-            ))
+      
+       
      )
     );
  }
@@ -125,13 +120,7 @@ class ActionsToolbar extends StatelessWidget {
               gradient: musicGradient,
               borderRadius: BorderRadius.circular(ProfileImageSize / 2)
             ),
-            child:  ClipRRect(borderRadius: BorderRadius.circular(10000.0),
-                child: CachedNetworkImage(
-                  imageUrl: userPic,
-                  placeholder: (context, url) => new CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => new Icon(Icons.error),
-              )
-            )
+           
           ),
           
       ]));

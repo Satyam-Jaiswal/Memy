@@ -24,15 +24,13 @@ class _HomeState extends State<Home> {
           initialData: List<Meme>(),
           stream: listmemes,
           builder: (BuildContext context, AsyncSnapshot snapshot) {
-            if (!snapshot.hasData) return CircularProgressIndicator();  
-            // List<Meme> meme = snapshot.data;
+            if (!snapshot.hasData) return CircularProgressIndicator();        
            
             return CircularProgressIndicator();
           
         }
       )
     ) ,
-      //  child: Center(child: CircularProgressIndicator()),
      );
    }   
 

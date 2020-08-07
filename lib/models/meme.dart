@@ -41,6 +41,7 @@ class Meme{
     data['comments'] = this.comments;
     data['url'] = this.url;
     return data;
-  }
+  };
 
+}
 }
