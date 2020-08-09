@@ -12,7 +12,7 @@ class _ProfileState extends State<Profile> {
       backgroundColor: Colors.white,
       body: Center(
           child: Text(
-        "Bhai profile wala page tu sambhal",
+        "Profile Page",
         style: TextStyle(color: Colors.amber, fontSize: 25),
       )),
     );
