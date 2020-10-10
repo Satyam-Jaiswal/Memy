@@ -1,6 +1,6 @@
 # Memy
 
-A new Flutter project for making memes.
+A new Flutter project for memes.
 
 ## Getting Started
 
