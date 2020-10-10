@@ -13,7 +13,6 @@ class BottomBar extends StatelessWidget {
   BottomBar();
 
   Widget get customCreateIcon => Container(
-        child: FloatingActionButton(
           child: Icon(
             Icons.add,
             color: Colors.black,
